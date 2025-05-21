@@ -2,8 +2,8 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from roast import roast_strategy
-from analyzer import summarize_code
+from portfolio_roast.roast import roast_strategy
+from portfolio_roast.analyzer import summarize_code
 
 import subprocess
 import os

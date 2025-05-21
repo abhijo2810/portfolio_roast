@@ -1,18 +1,20 @@
 # `portfolio_roast`
 
-`portfolio_roast` is a Python package that humorously roasts your trading strategy `.py` files using OpenAI GPT-4. It analyzes your code structure and delivers a sarcastic critique to keep you entertained while coding.
+`portfolio_roast` is a GPT-powered command-line tool that delivers sarcastic, intelligent critiques of your trading strategy code or trading performance. It analyzes your code structure and delivers a sarcastic critique to keep you entertained while coding. Whether you feed it a Python strategy file or a CSV of your trade results, it will respond like a brutally honest trading mentor who's had enough of RSI crossovers and emotional exits.
 
-## Features
+## 🚀 Features
 
-- Parses Python files to identify key structures like functions, loops, and constants.
-- Generates a sarcastic roast based on your trading strategy code.
-- Easy-to-use CLI tool: `portfolio-roast my_strategy.py`.
+- 📂 Supports both `.py` strategy code and `.csv` trade logs
+- 🤖 Uses OpenAI's GPT to generate entertaining and insightful feedback
+- 🧠 Parses your code to summarize structure (functions, loops, constants)
+- 📊 Computes basic trade performance metrics (win rate, profit factor, drawdown)
+- ✅ Lightweight CLI for quick and repeatable use
 
 ## Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/portfolio_roast.git
+    git clone https://github.com/abhijo2810/portfolio_roast.git
     cd portfolio_roast
     ```
 
@@ -35,6 +37,10 @@ Run the following command to roast your trading strategy file:
 portfolio-roast my_strategy.py
 ```
 
+### Token Usage
+
+Each user is limited to a maximum of 5 responses. This ensures fair usage of the tool. The package does not display token usage details for privacy reasons, but keep this limit in mind while using the tool.
+
 ### Example Output
 
 ```plaintext
@@ -43,21 +49,26 @@ Roast incoming:
 "Wow, a `while True` loop? Bold move. I guess you really wanted to make sure your strategy never stops losing money. And those hardcoded constants? Truly the hallmark of a professional quant."
 ```
 
-## How It Works
 
-1. **File Parsing**: The `roast_strategy` function reads your Python file and uses the `ast` module to analyze its structure.
-2. **Prompt Generation**: It creates a sarcastic prompt based on the code's structure.
-3. **OpenAI API**: Sends the prompt to GPT-4 and retrieves the roast.
-4. **CLI Tool**: Wraps everything in a command-line interface for easy use.
+## 🔧 How It Works
 
-## Error Handling
+1. 🧠 **Code Summarizer**: Uses Python’s ast module to parse trading strategy structure.
+2. 📈 **Metrics Engine**: Analyzes trade data for key performance indicators.
+3. 🧰 **Prompt Builder**: Crafts a GPT prompt based on your code or results.
+4. 🗣️ **Roast Engine**: Queries GPT-3.5 for an honest, sarcastic critique.
+5. 💻 **CLI Tool**: Combines everything into a clean command-line interface.
 
-- Ensures the file exists and is a valid Python file.
-- Handles API errors gracefully and provides meaningful error messages.
+## Testing
+
+To run tests for the package, use the following command:
+```bash
+python test_roast.py
+```
+This will simulate roast runs on both .py and .csv examples. This ensures that all functionalities are working as expected.
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+At this time, contributions are not being accepted as this is a personal project. Thank you for your understanding.
 
 ## License
 
@@ -65,4 +76,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Disclaimer
 
-This package is for entertainment purposes only. Don't take the roasts personally—your trading strategy is probably great!
+This tool is meant for educational and entertainment purposes only.
+The feedback is AI-generated and intentionally sarcastic please don’t take it personally — your trading strategy is probably great!
+Use your own judgment before using any roasted strategy in real markets.

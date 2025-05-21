@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
 import openai
-from analyzer import summarize_code
-from prompts import build_prompt, build_csv_prompt
-from metrics import analyze_trades
+from portfolio_roast.analyzer import summarize_code
+from portfolio_roast.prompts import build_prompt, build_csv_prompt
+from portfolio_roast.metrics import analyze_trades
 
 load_dotenv()  # Load variables from .env
 
@@ -41,7 +41,6 @@ def roast_strategy(file_path: str) -> str:
             max_tokens=500
         )
         roast = response.choices[0].message.content
-        display_usage_info(response.usage)
         return roast
     except Exception as e:
         return f"OpenAI API error: {e}"
@@ -58,8 +57,7 @@ def roast_csv(csv_path):
             temperature=0.8,
         )
         roast = response.choices[0].message.content
-        print(roast)
-        display_usage_info(response.usage)
+        return roast
 
     except Exception as e:
         roast = f"[ERROR] OpenAI API call failed: {e}"
