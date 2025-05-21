@@ -70,6 +70,13 @@ This will simulate roast runs on both .py and .csv examples. This ensures that a
 
 At this time, contributions are not being accepted as this is a personal project. Thank you for your understanding.
 
+## 💬 Feedback
+
+Have thoughts, roasts of the roast, or bugs to report?
+
+👉 [Open an Issue](https://github.com/abhijo2810/portfolio_roast/issues)  
+👉 Or join the Discussion tab and say hi!
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
